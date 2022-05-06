@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="mini_project_full.Site1" ClientIDMode="Static" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="Stylesheet" href="myProjectStyles.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <ul>
+            <li><a id="pgHome" runat="server" href="home.aspx">Home</a></li>
+            <li id="liPage1" runat="server"><a id="pgPage1" runat="server" href="page1.aspx">Page1</a></li>
+            <li id="liPage2" runat="server"><a id="pgPage2" runat="server" href="page2.aspx">Page2</a></li>
+            <li id="liPage3" runat="server"><a id="pgPage3" runat="server" href="page3.aspx">Page3</a></li>
+            <li id="liAdmin" runat="server"><a id="pgAdmin1" runat="server" href="admin1.aspx">Admin</a></li>
+            <li id="liLogout" runat="server" style="float:right"><a href="home.aspx" id="aLogout" runat="server" onserverclick="aLogout_ServerClick">Logout</a></li>
+            <li style="float: right"><a id="aUser" runat="server" href="login.aspx"><%=Session["user"]%></a></li>
+        </ul>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div id="divNotAuthorized" runat="server">Not Authorized</div>
+        </div>
+
+        <div id="divCountersForAdmin" runat="server" style="margin-top:30px;background-color:antiquewhite" >
+            <div id="divConnectedUsers" runat="server">Number of connected users: <%=Application["usersLoginCount"]%></div>
+            <div id="divPageVisitCount" runat="server">Number of visits on current page: <%=Session["currentPageCount"]%></div>
+        </div>
+    </form>
+</body>
+</html>
