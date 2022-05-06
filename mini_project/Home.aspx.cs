@@ -11,6 +11,9 @@ namespace mini_project_full
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*השמת ערך של הדף הנוכחי ב 
+               * Session
+               */
             Session["currentPage"] = "home";
         }
     }

@@ -11,8 +11,12 @@ namespace mini_project_full
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*השמת ערך של הדף הנוכחי ב 
+               * Session
+               */
             Session["currentPage"] = "admin1";
 
+            //יצירת טבלה וכתיבתה על הדף
             string table = "<table>";
             for(int i=0; i<10; i++)
             {
