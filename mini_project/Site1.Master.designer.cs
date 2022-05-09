@@ -42,6 +42,15 @@ namespace mini_project_full
         protected global::System.Web.UI.HtmlControls.HtmlAnchor pgHome;
 
         /// <summary>
+        /// pgDb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgDb;
+
+        /// <summary>
         /// liPage1 control.
         /// </summary>
         /// <remarks>

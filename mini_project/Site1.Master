@@ -13,6 +13,7 @@
     <form id="form1" runat="server">
         <ul>
             <li><a id="pgHome" runat="server" href="home.aspx">Home</a></li>
+            <li><a id="pgDb" runat="server" href="db.aspx">Database</a></li>
             <li id="liPage1" runat="server"><a id="pgPage1" runat="server" href="page1.aspx">Page1</a></li>
             <li id="liPage2" runat="server"><a id="pgPage2" runat="server" href="page2.aspx">Page2</a></li>
             <li id="liPage3" runat="server"><a id="pgPage3" runat="server" href="page3.aspx">Page3</a></li>

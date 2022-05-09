@@ -20,7 +20,7 @@ namespace mini_project_full
 
             //בדיקת הרשאות
             bool authorized = false;
-            if (currentPage == "home" || currentPage == "register" || currentPage == "login")
+             if (currentPage == "home" || currentPage == "register" || currentPage == "login" || currentPage == "db")
                 authorized = true;
             else if ((bool)Session["isLogin"] == true)
             {
@@ -74,6 +74,8 @@ namespace mini_project_full
                 pgPage3.Attributes["class"] = "active";
             else if (currentPage == "admin1")
                 pgAdmin1.Attributes["class"] = "active";
+            else if (currentPage == "db")
+                pgDb.Attributes["class"] = "active";
 
             //עדכון מספר הפעמים (מכל המשתמשים) שנכנסו לדף הנוכחי
             if (Application[currentPage + "Count"] == null)
