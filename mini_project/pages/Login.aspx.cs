@@ -25,7 +25,10 @@ namespace mini_project_full
             /*השמת ערך של הדף הנוכחי ב 
              * Session
              */
-            Session["currentPage"] = "register";
+            Session["currentPage"] = "login";
+
+            //הדף פתוח לכולם
+            Session["isAuthorized"] = true;
         }
 
         protected void btnLogin_ServerClick(object sender, EventArgs e)

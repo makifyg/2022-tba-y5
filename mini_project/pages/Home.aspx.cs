@@ -7,14 +7,18 @@ using System.Web.UI.WebControls;
 
 namespace mini_project_full
 {
-    public partial class Page2 : System.Web.UI.Page
+    public partial class Home : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             /*השמת ערך של הדף הנוכחי ב 
-             * Session
-             */
-            Session["currentPage"] = "page2";
+               * Session
+               */
+            Session["currentPage"] = "home";
+
+
+            //הדף פתוח לכולם
+            Session["isAuthorized"] = true;
         }
     }
 }

@@ -15,10 +15,14 @@ namespace mini_project_full
              * Session
              */
             Session["currentPage"] = "page3";
-            
+
+            //רק משתמשים רשומים יכולים לצפות בדף
+            if((bool)Session["isLogin"])
+                Session["isAuthorized"] = true;
+
             /*כשנכנסים לעמוד נרצה להציג את מספר הקליקים עד כה
              */
-            if(!IsPostBack)
+            if (!IsPostBack)
                 divClickCount.InnerHtml = Session["Page3SessionClicksCount"].ToString();
         }
 

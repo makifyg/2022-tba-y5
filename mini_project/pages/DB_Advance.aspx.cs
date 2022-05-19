@@ -13,24 +13,17 @@ namespace mini_project_full
     {
         const string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= |DataDirectory|\myDb.mdf;Integrated Security=True";
         SqlConnection connection = new SqlConnection(connectionString);
-        const string sandboxTableName = "sandboxTable";
+        const string animalsTableName = "animals";
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["currentPage"] = "db";
+            Session["currentPage"] = "dbAdvance";
+
+            //הדף פתוח לכולם
+            Session["isAuthorized"] = true;
 
             if (!IsPostBack)
                 ShowEnireTable();
-        }
-
-        protected void ShowEnireTable()
-        {
-            DataTable dt = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter("select * from sandboxTable", connectionString);
-            adapter.Fill(dt);
-
-            string htmlTable = getHtmlTable(dt);
-            idResultTable.InnerHtml = htmlTable;
         }
         protected string getHtmlTable(DataTable dt) 
         { 
@@ -61,30 +54,42 @@ namespace mini_project_full
 
             return htmlTable;
         }
+        protected void ShowEnireTable()
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter("select * from animals", connectionString);
+            int count = adapter.Fill(dt);
+
+            string htmlTable = getHtmlTable(dt);
+            idResultTable0.InnerHtml = htmlTable;
+            idCountResult0.InnerHtml = count.ToString();
+        }
         protected void btnRetrieveFromTable_ServerClick(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(inSqlCommand.Value, connectionString);
-            adapter.Fill(dt);
+            int count = adapter.Fill(dt);
 
             string htmlTable = getHtmlTable(dt);
-            idResultTable.InnerHtml = htmlTable;
+            idResultTable1.InnerHtml = htmlTable;
+            idCountResult1.InnerHtml = count.ToString();
+            ShowEnireTable();
         }
-        protected void btnAddUser_ServerClick(object sender, EventArgs e)
+        protected void btnAddAnimal_ServerClick(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter("select * from sandboxTable where 1=0", connectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter("select * from animals where 1=0", connectionString);
             adapter.Fill(dt);
 
             DataRow dr = dt.NewRow();
-            dr["userName"] = inUserToAdd.Value;
-            dr["password"] = inPasswordToAdd.Value;
+            dr["name"] = inAnimalToAdd.Value;
+            dr["type"] = inTypeToAdd.Value;
             dt.Rows.Add(dr);
             new SqlCommandBuilder(adapter);
             int rowsCount = adapter.Update(dt);
 
-            idAddUser.InnerHtml = "Success add user";
-
+            idAddAnimal.InnerHtml = "Success add animal";
+            idCountResult2.InnerHtml = rowsCount.ToString();
             ShowEnireTable();
         }
 
@@ -95,7 +100,7 @@ namespace mini_project_full
             con.Open();
             int n = (int)cmd.ExecuteScalar();
             con.Close();
-            idCountResult.InnerHtml = n.ToString();
+            idCountResult3.InnerHtml = n.ToString();
         }
 
         protected void btnExecuteNonQuery_ServerClick(object sender, EventArgs e)
@@ -105,7 +110,12 @@ namespace mini_project_full
             con.Open();
             int result = cmd.ExecuteNonQuery();
             con.Close();
-            idCountResult2.InnerHtml = result.ToString();
+            idCountResult4.InnerHtml = result.ToString();
+            ShowEnireTable();
+        }
+
+        protected void btnRetrieveAll_ServerClick(object sender, EventArgs e)
+        {
             ShowEnireTable();
         }
     }

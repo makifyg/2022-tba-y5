@@ -16,6 +16,11 @@ namespace mini_project_full
                */
             Session["currentPage"] = "admin1";
 
+            //Admin הדף פתוח רק ל
+            if ((bool)Session["isAdmin"])
+                Session["isAuthorized"] = true;
+
+
             //יצירת טבלה וכתיבתה על הדף
             string table = "<table>";
             for(int i=0; i<10; i++)

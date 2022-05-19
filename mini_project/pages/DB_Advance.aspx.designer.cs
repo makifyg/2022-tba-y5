@@ -15,13 +15,31 @@ namespace mini_project_full
     {
 
         /// <summary>
-        /// idResultTable control.
+        /// idResultTable0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idResultTable;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idResultTable0;
+
+        /// <summary>
+        /// idCountResult0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idCountResult0;
+
+        /// <summary>
+        /// btnRetrieveAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnRetrieveAll;
 
         /// <summary>
         /// inSqlCommand control.
@@ -33,6 +51,15 @@ namespace mini_project_full
         protected global::System.Web.UI.HtmlControls.HtmlTextArea inSqlCommand;
 
         /// <summary>
+        /// idSelectCommand control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect idSelectCommand;
+
+        /// <summary>
         /// btnGetSomeFromTable control.
         /// </summary>
         /// <remarks>
@@ -42,40 +69,67 @@ namespace mini_project_full
         protected global::System.Web.UI.HtmlControls.HtmlButton btnGetSomeFromTable;
 
         /// <summary>
-        /// inUserToAdd control.
+        /// idResultTable1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText inUserToAdd;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idResultTable1;
 
         /// <summary>
-        /// inPasswordToAdd control.
+        /// idCountResult1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText inPasswordToAdd;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idCountResult1;
 
         /// <summary>
-        /// btnAddUser control.
+        /// inAnimalToAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnAddUser;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inAnimalToAdd;
 
         /// <summary>
-        /// idAddUser control.
+        /// inTypeToAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idAddUser;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inTypeToAdd;
+
+        /// <summary>
+        /// btnAddAnimal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnAddAnimal;
+
+        /// <summary>
+        /// idAddAnimal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idAddAnimal;
+
+        /// <summary>
+        /// idCountResult2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idCountResult2;
 
         /// <summary>
         /// inSqlCommand2 control.
@@ -96,13 +150,13 @@ namespace mini_project_full
         protected global::System.Web.UI.HtmlControls.HtmlButton btnExecuteScalar;
 
         /// <summary>
-        /// idCountResult control.
+        /// idCountResult3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idCountResult;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idCountResult3;
 
         /// <summary>
         /// inSqlCommand3 control.
@@ -123,12 +177,12 @@ namespace mini_project_full
         protected global::System.Web.UI.HtmlControls.HtmlButton btnExecuteNonQuery;
 
         /// <summary>
-        /// idCountResult2 control.
+        /// idCountResult4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idCountResult2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idCountResult4;
     }
 }

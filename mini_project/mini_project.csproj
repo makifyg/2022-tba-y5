@@ -67,82 +67,106 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin1.aspx" />
+    <Content Include="pages\Admin1.aspx" />
     <Content Include="App_Data\myDb.mdf" />
     <Content Include="App_Data\myDb_log.ldf">
       <DependentUpon>myDb.mdf</DependentUpon>
     </Content>
-    <Content Include="DB.aspx" />
+    <Content Include="pages\Db_NotConnected.aspx" />
+    <Content Include="pages\DB_Advance.aspx" />
+    <Content Include="pages\Db_Connected.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Home.aspx" />
-    <Content Include="Login.aspx" />
-    <Content Include="myProjectCode.js" />
-    <Content Include="myProjectStyles.css" />
-    <Content Include="Page1.aspx" />
-    <Content Include="Page2.aspx" />
-    <Content Include="page3.aspx" />
-    <Content Include="Register.aspx" />
+    <Content Include="pages\Home.aspx" />
+    <Content Include="pages\Login.aspx" />
+    <Content Include="js\myProjectCode.js" />
+    <Content Include="css\myProjectStyles.css" />
+    <Content Include="pages\Page1.aspx" />
+    <Content Include="pages\Page2.aspx" />
+    <Content Include="pages\page3.aspx" />
+    <Content Include="pages\Register.aspx" />
+    <Content Include="pages\FormValidation.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin1.aspx.cs">
+    <Compile Include="pages\Admin1.aspx.cs">
       <DependentUpon>Admin1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin1.aspx.designer.cs">
+    <Compile Include="pages\Admin1.aspx.designer.cs">
       <DependentUpon>Admin1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DB.aspx.cs">
-      <DependentUpon>DB.aspx</DependentUpon>
+    <Compile Include="pages\Db_NotConnected.aspx.cs">
+      <DependentUpon>Db_NotConnected.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DB.aspx.designer.cs">
-      <DependentUpon>DB.aspx</DependentUpon>
+    <Compile Include="pages\Db_NotConnected.aspx.designer.cs">
+      <DependentUpon>Db_NotConnected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DB_Advance.aspx.cs">
+      <DependentUpon>DB_Advance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\DB_Advance.aspx.designer.cs">
+      <DependentUpon>DB_Advance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Db_Connected.aspx.cs">
+      <DependentUpon>Db_Connected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Db_Connected.aspx.designer.cs">
+      <DependentUpon>Db_Connected.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Home.aspx.cs">
+    <Compile Include="pages\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.designer.cs">
+    <Compile Include="pages\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Page1.aspx.cs">
+    <Compile Include="pages\Page1.aspx.cs">
       <DependentUpon>Page1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page1.aspx.designer.cs">
+    <Compile Include="pages\Page1.aspx.designer.cs">
       <DependentUpon>Page1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Page2.aspx.cs">
+    <Compile Include="pages\Page2.aspx.cs">
       <DependentUpon>Page2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page2.aspx.designer.cs">
+    <Compile Include="pages\Page2.aspx.designer.cs">
       <DependentUpon>Page2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="page3.aspx.cs">
+    <Compile Include="pages\page3.aspx.cs">
       <DependentUpon>page3.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="page3.aspx.designer.cs">
+    <Compile Include="pages\page3.aspx.designer.cs">
       <DependentUpon>page3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\FormValidation.aspx.cs">
+      <DependentUpon>FormValidation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\FormValidation.aspx.designer.cs">
+      <DependentUpon>FormValidation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.aspx.cs">
+    <Compile Include="pages\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Register.aspx.designer.cs">
+    <Compile Include="pages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
@@ -163,6 +187,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -11,223 +11,169 @@ namespace mini_project_full
 {
 
 
-    public partial class Site1
+    public partial class Db1
     {
 
         /// <summary>
-        /// head control.
+        /// idAnimalsTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idAnimalsTable;
 
         /// <summary>
-        /// form1 control.
+        /// idSelectAnimals control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea idSelectAnimals;
 
         /// <summary>
-        /// pgHome control.
+        /// btnSelect control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgHome;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnSelect;
 
         /// <summary>
-        /// pgDatabase control.
+        /// idSelectResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgDatabase;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idSelectResult;
 
         /// <summary>
-        /// pgDbNotConnected control.
+        /// inAnimalNameToAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgDbNotConnected;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inAnimalNameToAdd;
 
         /// <summary>
-        /// pgDbConnected control.
+        /// inAnimalTypeToAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgDbConnected;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inAnimalTypeToAdd;
 
         /// <summary>
-        /// pgDbAdvance control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgDbAdvance;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnAdd;
 
         /// <summary>
-        /// liFormValidation control.
+        /// idAddResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liFormValidation;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idAddResult;
 
         /// <summary>
-        /// pgFormValidation control.
+        /// idNameToUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgFormValidation;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText idNameToUpdate;
 
         /// <summary>
-        /// liPage1 control.
+        /// idTypeToUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liPage1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText idTypeToUpdate;
 
         /// <summary>
-        /// pgPage1 control.
+        /// idUpdateSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgPage1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText idUpdateSize;
 
         /// <summary>
-        /// liPage2 control.
+        /// idUpdateEndangered control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liPage2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText idUpdateEndangered;
 
         /// <summary>
-        /// pgPage2 control.
+        /// idUpdateEstimation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgPage2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText idUpdateEstimation;
 
         /// <summary>
-        /// liPage3 control.
+        /// btnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liPage3;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnUpdate;
 
         /// <summary>
-        /// pgPage3 control.
+        /// idUpdateResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgPage3;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idUpdateResult;
 
         /// <summary>
-        /// liAdmin control.
+        /// idNameToDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liAdmin;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText idNameToDelete;
 
         /// <summary>
-        /// pgAdmin1 control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor pgAdmin1;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnDelete;
 
         /// <summary>
-        /// liLogout control.
+        /// idDeleteResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liLogout;
-
-        /// <summary>
-        /// aLogout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor aLogout;
-
-        /// <summary>
-        /// aUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor aUser;
-
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-
-        /// <summary>
-        /// divNotAuthorized control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divNotAuthorized;
-
-        /// <summary>
-        /// divCounters control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCounters;
-
-        /// <summary>
-        /// divConnectedUsers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divConnectedUsers;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idDeleteResult;
     }
 }

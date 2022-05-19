@@ -12,8 +12,7 @@ namespace mini_project_full
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            Application["Page3GlobalClicksCount"] = 0;
-            Application["usersLoginCount"] = 0;
+            Application["usersCount"] = 0;
         }
 
         protected void Session_Start(object sender, EventArgs e)
@@ -25,14 +24,14 @@ namespace mini_project_full
             Session["user"] = "Guest";
             Session["isLogin"] = false;
             Session["Page3SessionClicksCount"] = 0;
+            Session["isFreePage"] = false;
+            Session["currentPage"] = "";
 
             /* כאשר נוצר 
              * Session
-             * נעדכן את מספר המשתמשים הרשומים באתר ונוסיף אחד לספירה
+             * נעדכן את מספר המשתמשים שנמצאים כרגע באתר ונוסיף אחד לספירה
              */
-            Application["usersLoginCount"] = (int)Application["usersLoginCount"] +1;
-
-            Session.Timeout = 1;
+            Application["usersCount"] = (int)Application["usersCount"] +1;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -53,9 +52,9 @@ namespace mini_project_full
         {
             /*כאשר מסתיים 
              * Session
-             * נעדכן את מספר המשתמשים הרשומים באתר ונוריד אחד מהספירה
+             * נעדכן את מספר המשתמשים הנמצאים כרגע באתר ונוריד אחד מהספירה
              */
-            Application["usersLoginCount"] = (int)Application["usersLoginCount"] - 1;
+            Application["usersCount"] = (int)Application["usersCount"] - 1;
         }
 
         protected void Application_End(object sender, EventArgs e)

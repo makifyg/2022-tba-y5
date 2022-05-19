@@ -19,28 +19,21 @@ namespace mini_project_full
             bool isAdmin = (bool)Session["isAdmin"];
 
             //בדיקת הרשאות
-            bool authorized = false;
-             if (currentPage == "home" || currentPage == "register" || currentPage == "login" || currentPage == "db")
-                authorized = true;
-            else if ((bool)Session["isLogin"] == true)
-            {
-                if(currentPage == "page1" && currentUser == "user1")
-                    authorized = true;
-                else if (currentPage == "page2" && currentUser == "user2")
-                    authorized = true;
-                else if (currentPage == "admin1" && (bool)Session["isAdmin"] == true)
-                    authorized = true;
-                else if (currentPage != "page1" && currentPage != "page2" && currentPage != "admin1")
-                    authorized = true;
-            }
+            bool authorizedPage = (bool)Session["isAuthorized"];
 
             /*אם למשתמש אין הרשאות לדף הנוכחי, יש להעלים את תוכן הדף ולהשאיר הודעת שגיאה 
              *אחרת יש להשאיר את תוכן הדף ולהעלים את הודעת השגיאה 
              */
-            if (authorized==false)
-                ContentPlaceHolder1.Visible = false;
-            else
+            if (authorizedPage == true)
+            {
+                ContentPlaceHolder1.Visible = true;
                 divNotAuthorized.Visible = false;
+            }
+            else
+            {
+                ContentPlaceHolder1.Visible = false;
+                divNotAuthorized.Visible = true;
+            }
 
             //הסתרת חלקים בתפריט, בהתאם להרשאות של המשתמש
             if (isAdmin == false)
@@ -62,7 +55,7 @@ namespace mini_project_full
                 liPage3.Visible = false;
                 liLogout.Visible = false;
             }
-            
+
             //הדגשת הדף הנוכחי בתפריט
             if (currentPage == "home")
                 pgHome.Attributes["class"] = "active";
@@ -74,22 +67,21 @@ namespace mini_project_full
                 pgPage3.Attributes["class"] = "active";
             else if (currentPage == "admin1")
                 pgAdmin1.Attributes["class"] = "active";
-            else if (currentPage == "db")
-                pgDb.Attributes["class"] = "active";
-
-            //עדכון מספר הפעמים (מכל המשתמשים) שנכנסו לדף הנוכחי
-            if (Application[currentPage + "Count"] == null)
-                Application[currentPage + "Count"] = 0; 
-            int currentPageHitCount = (int)Application[currentPage + "Count"];
-            if (!IsPostBack)
+            else if (currentPage == "dbNotConnected")
             {
-                Application[currentPage + "Count"] = ++currentPageHitCount;
-                Session["currentPageCount"] = currentPageHitCount;
+                pgDatabase.Attributes["class"] = "active";
+                pgDatabase.InnerHtml = pgDbNotConnected.InnerHtml;
             }
-
-            //אם המשתמש אינו מנהל יש להוריד את החלק שמראה את ספירת המשתמשים
-            if (isAdmin == false)
-                divCountersForAdmin.Visible = false;
+            else if (currentPage == "dbConnected")
+            {
+                pgDatabase.Attributes["class"] = "active";
+                pgDatabase.InnerHtml = pgDbConnected.InnerHtml;
+            }
+            else if (currentPage == "dbAdvance")
+            {
+                pgDatabase.Attributes["class"] = "active";
+                pgDatabase.InnerHtml = pgDbAdvance.InnerHtml;
+            }
         }
 
         protected void aLogout_ServerClick(object sender, EventArgs e)
@@ -97,6 +89,7 @@ namespace mini_project_full
             /*כאשר המשתמש לחץ על לוג-אאוט, סוגרים את ה  
              * Session
              * ומעבירים את המשתמש לדף הבית כמשתמש לא רשום
+             * ומורידים את מספר המשתמשים הרשומים שנמצאים באתר באחד
              */
             Session.Abandon();
             Response.Redirect("home.aspx");           
